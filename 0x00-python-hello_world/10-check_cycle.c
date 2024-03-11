@@ -18,15 +18,15 @@ int check_cycle(listint_t *list)
 		return (0);
 	}
 
-	while (temp != NULL && temp->next != NULL && temp2 != NULL)
+	while (temp && temp->next && temp2)
 	{
-		if (list == temp)
+		if (temp2 == temp)
 		{
 			return (1);
 		}
 		else
 		{
-			temp2 = list->next;
+			temp2 = temp2->next;
 			temp = temp->next->next;
 		}
 	}
