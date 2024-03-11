@@ -24,11 +24,8 @@ int check_cycle(listint_t *list)
 		{
 			return (1);
 		}
-		else
-		{
-			temp2 = temp2->next;
-			temp = temp->next->next;
-		}
+		temp2 = temp2->next;
+		temp = temp->next->next;
 	}
 	return (0);
 }
