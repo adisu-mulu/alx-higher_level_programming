@@ -3,7 +3,7 @@ import random
 number = random.randint(-10000, 10000)
 if (number < 0):
     negNumber = number * -1
-    last_digit = negNumber % 10
+    last_digit = (negNumber % 10) * -1
 else:
     last_digit = number % 10
 if last_digit > 5:
