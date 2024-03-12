@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def uppercase(str):
+    strs = ""
     for letter in (str):
         digit = ord(letter)
         if digit in range(97, 123):
@@ -7,5 +8,5 @@ def uppercase(str):
             upperCase = chr(digit)
         else:
             upperCase = letter
-        print("{}".format(upperCase), end="")
-    print("\n")
+        strs = strs + upperCase
+    print("{}".format(strs))
