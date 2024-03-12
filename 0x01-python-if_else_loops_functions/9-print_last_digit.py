@@ -5,5 +5,5 @@ def print_last_digit(number):
     toStr = str(number)
     if (toStr.isnumeric()):
         last_digit = toStr[-1]
-        print(last_digit, end = "")
+        print(last_digit, end="")
         return last_digit
