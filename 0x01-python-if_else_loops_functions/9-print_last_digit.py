@@ -2,4 +2,5 @@
 def print_last_digit(number):
     toStr = str(number)
     last_digit = toStr[-1]
-    print(last_digit)
+    print(last_digit, end = "")
+    return last_digit
