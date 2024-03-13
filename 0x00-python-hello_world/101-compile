@@ -1,2 +1,5 @@
 #!/usr/bin/python3
-python3 -m compileall -b "$PYFILE"
+python_file="$PYFILE"
+compiled_file="${python_file%.py}.pyc"
+python3 -m py_compile "$python_file"
+mv "${python_file}c" "$compiled_file"
