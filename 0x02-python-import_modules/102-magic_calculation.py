@@ -8,9 +8,11 @@ def magic_calculation(a, b):
     else:
         c = sub(a, b)
     return c
-        
+
+
 def add(a, b):
-    return a + b
-        
+    return (a + b)
+
+
 def sub(a, b):
-    return a - b
+    return (a - b)
