@@ -9,8 +9,8 @@ if __name__ == "__main__":
     else:
         a = int(sys.argv[1])
         b = int(sys.argv[3])
-        if sys.argv[2] == '*':
-            operator == "*"
+        if sys.argv[2] == "*":
+            operator = "*"
         else:
             operator = sys.argv[2]
 
@@ -18,7 +18,7 @@ if __name__ == "__main__":
             print("{} + {} = {}".format(a, b, calc.add(a, b)))
         elif operator == "-":
             print("{} - {} = {}".format(a, b, calc.sub(a, b)))
-        elif operator == "\*":
+        elif operator == "*":
             print("{} * {} = {}".format(a, b, calc.mul(a, b)))
         elif operator == "/":
             print("{} / {} = {}".format(a, b, calc.div(a, b)))
