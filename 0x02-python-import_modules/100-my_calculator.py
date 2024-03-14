@@ -4,7 +4,7 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) - 1 < 3:
-        print("usage: ./{} <a> <operator> <b>".format(sys.argv[0]))
+        print("usage: {} <a> <operator> <b>".format(sys.argv[0]))
         exit(1)
     else:
         a = int(sys.argv[1])
