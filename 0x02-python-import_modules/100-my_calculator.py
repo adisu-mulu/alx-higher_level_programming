@@ -3,9 +3,9 @@ if __name__ == "__main__":
     import calculator_1 as calc
     import sys
 
-    if len(sys.argv) - 1 < 3:
+    if len(sys.argv) - 1 != 3:
         print("usage: {} <a> <operator> <b>".format(sys.argv[0]))
-        exit(1)
+        sys.exit(1)
     else:
         a = int(sys.argv[1])
         b = int(sys.argv[3])
@@ -21,4 +21,4 @@ if __name__ == "__main__":
             print("{} / {} = {}".format(a, b, calc.div(a, b)))
         else:
             print("Unknown operator, Available operators: +, -, * and /")
-            exit(1)
+            sys.exit(1)
