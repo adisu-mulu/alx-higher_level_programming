@@ -4,12 +4,15 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) - 1 != 3:
-        print("usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("usage: {} <a> <operator> <b>".format(sys.argv[0]))
         sys.exit(1)
     else:
         a = int(sys.argv[1])
         b = int(sys.argv[3])
-        operator = sys.argv[2]
+        if sys.argv[2] == '*':
+            operator == "*"
+        else:
+            operator = sys.argv[2]
 
         if operator == "+":
             print("{} + {} = {}".format(a, b, calc.add(a, b)))
