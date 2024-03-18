@@ -6,14 +6,14 @@
  */
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
 	listint_t *temp;
-
 	listint_t *slow = *head;
 	listint_t *fast = *head;
 	listint_t *prev = NULL;
 
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+	
 	while (fast != NULL && fast->next != NULL)
 	{
 		fast = fast->next->next;
