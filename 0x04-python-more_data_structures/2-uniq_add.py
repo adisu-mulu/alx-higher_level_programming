@@ -5,4 +5,3 @@ def uniq_add(my_list=[]):
     for val in temp:
         x = x + val
     return (x)
-    
