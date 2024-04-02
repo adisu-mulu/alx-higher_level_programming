@@ -9,6 +9,8 @@ class Square:
         """the init method initializes size as private instance attribute
         Args:
             size (int): the size of square
+        Attributes:
+            __size (int): private variable that stores size
         """
         if size.__class__ != int:
             raise TypeError("size must be an integer")
