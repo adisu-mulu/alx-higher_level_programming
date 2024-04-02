@@ -7,7 +7,7 @@ class Square:
     def __init__(self, size=0):
         """the init method initializes size as private instance attribute
         Args:
-             size: size of the square
+             size (int): size of the square
         """
         self.__size = size
 
@@ -20,7 +20,7 @@ class Square:
     def size(self, value):
         """This method sets the value of size
         Args:
-             value: first param
+             value (int): first param
         Returns: nothing
 
         """
