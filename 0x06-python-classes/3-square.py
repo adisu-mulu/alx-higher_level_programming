@@ -9,7 +9,7 @@ class Square:
     def __init__(self, size=0):
         """the init method initializes size as private instance attribute
         Args:
-             size (int): the size of square
+            size (int): the size of square
         """
         if size.__class__ != int:
             raise TypeError("size must be an integer")
