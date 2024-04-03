@@ -3,8 +3,9 @@
 
 
 class Square:
+
     """This class defines the init method to initialize size"""
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """the init method initializes size as private instance attribute
         Args:
              size (int): size of the square
@@ -16,6 +17,7 @@ class Square:
     def size(self):
         """Thsi method retrieves the value of size"""
         return (self.__size)
+
     def position(self):
         """Thsi method retrieves the value of position"""
         return (self.__position)
