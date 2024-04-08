@@ -79,4 +79,4 @@ class Rectangle:
 
     def __repr__(obj):
         name = type(obj).__name__
-        return f"{name}({obj.__width},{obj.__height})"
+        return f"{name}({obj.__width}, {obj.__height})"
