@@ -8,6 +8,6 @@ class Rectangle:
     """
     Class Rectangle implements the init function
     """
-    def __inint__(self):
+    def __init__(self):
         """ the init function initializes a new Rectangle object """
         pass
