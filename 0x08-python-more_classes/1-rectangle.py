@@ -45,7 +45,6 @@ class Rectangle:
         Args:
         value (int): the new value
         """
-        self.__height = value
         if type(value) not in [int]:
             raise TypeError("height mut be an integer")
         if value < 0:
