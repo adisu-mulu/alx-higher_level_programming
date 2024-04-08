@@ -9,8 +9,8 @@ class Rectangle:
     Class Rectangle implements the init function
     """
     def __init__(self, width=0, height=0):
-        """ the init function initializes a new Rectangle object 
-        Args: 
+        """ the init function initializes a new Rectangle object
+        Args:
         width (int): width of the rectangle
         height (int): height of the rectangle
         """
@@ -31,7 +31,7 @@ class Rectangle:
     def width(self, value):
         """sets the width of the rectangle
         Args:
-        value (int): the new value 
+        value (int): the new value
         """
         if type(value) not in [int]:
             raise TypeError("width mut be an integer")
@@ -53,7 +53,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        
+
         """ Returns the area of the rectangle"""
 
         return (self.__width * self.__height)
