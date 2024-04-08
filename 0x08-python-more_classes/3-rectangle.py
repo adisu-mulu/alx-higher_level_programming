@@ -72,6 +72,7 @@ class Rectangle:
         for x in range(self.__height):
             for y in range(self.__width):
                 pattern = pattern + '#'
-            pattern = pattern + '\n'
+            if x < self.__height - 1:
+                pattern = pattern + '\n'
 
         return pattern
