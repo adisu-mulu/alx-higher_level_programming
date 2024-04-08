@@ -33,7 +33,7 @@ class Rectangle:
         Args:
         value (int): the new value
         """
-        if type(value) not in [int]:
+        if not isinstance(value, int):
             raise TypeError("width mut be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -45,7 +45,7 @@ class Rectangle:
         Args:
         value (int): the new value
         """
-        if type(value) not in [int]:
+        if not isinstance(value, int):
             raise TypeError("height mut be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
