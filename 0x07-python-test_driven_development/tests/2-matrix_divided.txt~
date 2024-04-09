@@ -1,0 +1,39 @@
+"""
+This is the add-integer module.
+This module implements one function called add_integer(a, b)
+
+    >>> import importlib
+
+    >>> module_name = "2-matrix_divided"
+    >>> module_spec = importlib.util.spec_from_file_location(module_name, "2-matrix_divided.py")
+    >>> module = importlib.util.module_from_spec(module_spec)
+    >>> module_spec.loader.exec_module(module)
+
+     >>> matrix=[[1,2,3],[4,5,6]]
+     >>> module.matrix_divided(matrix, 3)
+     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+     >>> matrix=[['a',2,3],[4,5,6]]
+     >>> module.matrix_divided(matrix, 3)
+     Traceback (most recent call last):
+     	       ...
+     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+     >>> matrix=[[1,2],[3,4,5]]
+     >>> module.matrix_divided(matrix, 3)
+     Traceback (most recent call last):
+     	       ...
+     TypeError: Each row of the matrix must have the same size
+
+     >>> matrix=[[1,2,3],[3,4,5]]
+     >>> module.matrix_divided(matrix, 'a')
+     Traceback (most recent call last):
+     	       ...
+     TypeError: div must be a number
+
+     >>> matrix=[[1,2,3],[3,4,5]]
+     >>> module.matrix_divided(matrix, 0)
+     Traceback (most recent call last):
+     	       ...
+     ZeroDivisionError: division by zero
+     

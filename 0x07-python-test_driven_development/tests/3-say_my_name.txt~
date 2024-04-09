@@ -1,0 +1,22 @@
+"""
+This is the add-integer module.
+This module implements one function called add_integer(a, b)
+
+    >>> import importlib
+
+    >>> module_name = "3-say_my_name"
+    >>> module_spec = importlib.util.spec_from_file_location(module_name, "3-say_my_name.py")
+    >>> module = importlib.util.module_from_spec(module_spec)
+    >>> module_spec.loader.exec_module(module)
+
+     >>> module.say_my_name("John", "Smith")
+     My name is John Smith
+     >>> module.say_my_name(12, "White")
+     Traceback (most recent call last):
+     	       ...
+     TypeError: first_name must be a string
+
+      >>> module.say_my_name("White", 12)
+      Traceback (most recent call last):
+      		...
+      TypeError: last_name must be a string

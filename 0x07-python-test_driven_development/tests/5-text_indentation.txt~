@@ -1,0 +1,21 @@
+"""
+This is the add-integer module.
+This module implements one function called add_integer(a, b)
+
+    >>> import importlib
+
+    >>> module_name = "5-text_indentation"
+    >>> module_spec = importlib.util.spec_from_file_location(module_name, "5-text_indentation.py")
+    >>> module = importlib.util.module_from_spec(module_spec)
+    >>> module_spec.loader.exec_module(module)
+
+     >>> module.text_indentation('a')
+     Traceback (most recent call last):
+     	       ...
+     TypeError: text must be a string
+
+     >>> module.text_indentation(1)
+     Traceback (most recent call last):
+     	       ...
+     TypeError: text must be a string
+    

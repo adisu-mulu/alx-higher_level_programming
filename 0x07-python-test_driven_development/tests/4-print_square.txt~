@@ -1,0 +1,25 @@
+"""
+This is the add-integer module.
+This module implements one function called add_integer(a, b)
+
+    >>> import importlib
+
+    >>> module_name = "4-print_square"
+    >>> module_spec = importlib.util.spec_from_file_location(module_name, "4-print_square.py")
+    >>> module = importlib.util.module_from_spec(module_spec)
+    >>> module_spec.loader.exec_module(module)
+
+     >>> module.print_square('a')
+     Traceback (most recent call last):
+     	       ...
+     TypeError: size must be an integer
+      >>> module.print_square(-1)
+      Traceback (most recent call last):
+      		...
+      ValueError: size must be >= 0
+
+      >>> module.print_square(-4.5)
+      Traceback (most recent call last):
+      		...
+      TypeError: size must be an integer
+     
