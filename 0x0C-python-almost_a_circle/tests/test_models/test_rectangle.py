@@ -51,7 +51,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r1.width = 0
         with self.assertRaises(ValueError):
-            r1.width = 5
+            r1.width = -5
         with self.assertRaises(ValueError):
             r1.height = 0
         with self.assertRaises(ValueError):
@@ -83,3 +83,13 @@ class TestRectangle(unittest.TestCase):
         print(r1)
         output = captured_output.getvalue()
         self.assertIn("[Rectangle] (12) 2/1 - 4/6", output)
+
+    def test_update(self):
+        """This function updates the attributes"""
+        captured_output = io.StringIO()
+        sys.stdout = captured_output
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(89)
+        print(r1)
+        output = captured_output.getvalue()
+        self.assertIn("[Rectangle] (89) 10/10 - 10/10", output)

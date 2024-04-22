@@ -122,3 +122,22 @@ class Rectangle(Base):
                 f"[Rectangle] ({self.id}) {self.x}/{self.y} "
                 f"- {self.width}/{self.height}"
             )
+
+    def update(self, *args):
+        """This function updates the attriutes"""
+        count = len(args)
+        step = 0
+        if step < count:
+            self.id = args[0]
+            step += 1
+        if step < count:
+            self.width = args[1]
+            step += 1
+        if step < count:
+            self.height = args[2]
+            step += 1
+        if step < count:
+            self.x = args[3]
+            step += 1
+        if step < count:
+            self.y = args[4]
