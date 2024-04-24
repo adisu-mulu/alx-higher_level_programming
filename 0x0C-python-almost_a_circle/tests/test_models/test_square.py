@@ -6,13 +6,14 @@ import unittest
 import io
 import sys
 
+
 class TestSquare(unittest.TestCase):
     """This class defines the test class"""
     def test_inheritance(self):
-         """This function checks the case for inheritance"""
-         s1 = Square(5)
-         self.assertTrue(isinstance(s1, Rectangle))
-         self.assertTrue(isinstance(s1, Square))
+        """This function checks the case for inheritance"""
+        s1 = Square(5)
+        self.assertTrue(isinstance(s1, Rectangle))
+        self.assertTrue(isinstance(s1, Square))
 
     def test_str(self):
         """This fucntion checks the modification of str"""
