@@ -123,21 +123,34 @@ class Rectangle(Base):
                 f"- {self.width}/{self.height}"
             )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """This function updates the attriutes"""
         count = len(args)
-        step = 0
-        if step < count:
-            self.id = args[0]
-            step += 1
-        if step < count:
-            self.width = args[1]
-            step += 1
-        if step < count:
-            self.height = args[2]
-            step += 1
-        if step < count:
-            self.x = args[3]
-            step += 1
-        if step < count:
-            self.y = args[4]
+
+        if count != 0:
+            step = 0
+            if step < count:
+                self.id = args[0]
+                step += 1
+            if step < count:
+                self.width = args[1]
+                step += 1
+            if step < count:
+                self.height = args[2]
+                step += 1
+            if step < count:
+                self.x = args[3]
+                step += 1
+            if step < count:
+                self.y = args[4]
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
