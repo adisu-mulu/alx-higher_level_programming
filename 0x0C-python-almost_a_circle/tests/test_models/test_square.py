@@ -22,4 +22,4 @@ class TestSquare(unittest.TestCase):
         s1 = Square(5)
         print(s1)
         output = captured_output.getvalue()
-        self.assertIn("[Square] (1) 0/0 - 5", output)
+        self.assertIn("[Square] (2) 0/0 - 5", output)
