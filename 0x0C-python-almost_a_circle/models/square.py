@@ -16,7 +16,6 @@ class Square(Rectangle):
         """
         self.__size = size
         super().__init__(size, size, x, y, id)
-        
 
     def __str__(self):
         """modifies the string representation of the rectangle"""
@@ -42,7 +41,8 @@ class Square(Rectangle):
         self.__size = value
 
     def update(self, *args, **kwargs):
-        """This function updates the attributes with args or kwargs if args is empty"""
+        """This function updates the attributes with args or
+        kwargs if args is empty"""
         count = len(args)
         step = 0
         if len(args) > 0:
