@@ -5,6 +5,7 @@
 class Base:
     """Defining the base class"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """ initializing the base class with a default id
            Arguements:
