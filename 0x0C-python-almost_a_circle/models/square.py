@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """This module defines a class that inherits the Rectangle class"""
 
 from models.rectangle import Rectangle
