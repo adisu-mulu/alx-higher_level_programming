@@ -93,3 +93,15 @@ class TestRectangle(unittest.TestCase):
         print(r1)
         output = captured_output.getvalue()
         self.assertIn("[Rectangle] (89) 10/10 - 10/10", output)
+
+    def test_save_to_file(self):
+        captured_output = io.StringIO()
+        sys.stdout = captured_output
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+
+        with open("Rectangle.json", "r") as file:
+            print(file.read())
+        output = captured_output.getvalue()
+        self.assertIn('[{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7}, {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]', output)
