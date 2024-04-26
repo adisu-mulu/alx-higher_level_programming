@@ -29,3 +29,9 @@ class TestBase(unittest.TestCase):
         print(type(json_dictionary))
         output = captured_output.getvalue()
         self.assertIn("<class 'str'>", output)
+
+    def test_from_json_string_type(self):
+        list_input = [{"id": 89, "width": 10, "height": 4}]
+        json_list_input = Rectangle.to_json_string(list_input)
+        list_output = Rectangle.from_json_string(json_list_input)
+        self.assertEqual(list, type(list_output))

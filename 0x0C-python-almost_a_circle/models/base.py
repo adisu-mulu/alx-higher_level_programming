@@ -39,3 +39,11 @@ class Base:
             data = cls.to_json_string(dataList)
             with open(f"{cls.__name__}.json", 'w', encoding="utf-8") as f:
                 f.write(data)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """This method returns a json representation"""
+        if json_string is None:
+            return []
+        data = json.loads(json_string)
+        return (data)
