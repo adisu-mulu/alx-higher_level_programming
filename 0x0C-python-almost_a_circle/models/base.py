@@ -51,7 +51,6 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Return a class instantied from a dictionary of attributes.
-
         Args:
             **dictionary (dict): Key/value pairs of attributes to initialize.
         """
@@ -62,11 +61,10 @@ class Base:
                 new = cls(1)
             new.update(**dictionary)
             return new
-            
+
     @classmethod
     def load_from_file(cls):
         """Return a list of classes instantiated from a file of JSON strings.
-        
         Reads from `<cls.__name__>.json`.
 
         Returns:
