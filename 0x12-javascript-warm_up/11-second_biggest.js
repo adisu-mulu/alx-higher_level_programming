@@ -6,8 +6,24 @@ if (argv[2] === undefined || argv[3] === undefined) {
   let biggest = Number(argv[2]);
   for (let i = 3; i < argv.length; i++) {
     if (Number(argv[i]) > biggest) {
-      biggest = argv[i];
+      biggest = Number(argv[i]);
     }
   }
-  console.log(biggest);
+  let j, second;
+  if (Number(argv[2]) === biggest) {
+    second = argv[3];
+    j = 4;
+  } else {
+    second = argv[2];
+    j = 3;
+  }
+  while (j < argv.length) {
+    if (Number(argv[j]) > second && Number(argv[j]) < biggest) {
+      second = Number(argv[j]);
+      j++;
+    } else {
+      j++;
+    }
+  }
+  console.log(second);
 }
