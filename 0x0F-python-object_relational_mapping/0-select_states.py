@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""This module connects to a database with the given arguements"""
 import MySQLdb
 import sys
 if __name__ == '__main__':
-    arg1 = sys.argv[1];
-    arg2 = sys.argv[2];
-    arg3 = sys.argv[3];
+    arg1 = sys.argv[1]
+    arg2 = sys.argv[2]
+    arg3 = sys.argv[3]
 
     db = MySQLdb.connect(host="localhost", user=arg1,
                          passwd=arg2, db=arg3, port=3306)
