@@ -8,7 +8,7 @@ if __name__ == '__main__':
         user=sys.argv[1], passwd=sys.argv[2],
         db=sys.argv[3], host="localhost", port=3306)
     cursor = db.cursor()
-    cursor.execute("""select * from states where name = '{}'
+    cursor.execute("""select * from states where name like binary '{}'
                     order by states.id ASC""".format(sys.argv[4]))
     result = cursor.fetchall()
     for row in result:
