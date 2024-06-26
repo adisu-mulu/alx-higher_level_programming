@@ -8,7 +8,7 @@ db = MySQLdb.connect(
     db=sys.argv[3], host="localhost", port=3306)
 cursor = db.cursor()
 cursor.execute("select * from states where name like 'N%'
-order by states.id ASC")
+               order by states.id ASC")
 result = cursor.fetchall()
 for row in result:
     print(row)
