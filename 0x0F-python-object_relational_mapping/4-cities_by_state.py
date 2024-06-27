@@ -8,9 +8,9 @@ if __name__ == '__main__':
         user=sys.argv[1], passwd=sys.argv[2],
         db=sys.argv[3], host="localhost", port=3306)
     cursor = db.cursor()
-    cursor.execute("""select state_id, cities.name, states.name from
-                     cities, states where states.id = cities.state_id
-                    order by cities.id ASC""")
+    cursor.execute("""select cities.id, cities.name, states.name
+                     from cities inner join
+                     states on states.id = cities.state_id""")
     result = cursor.fetchall()
     for row in result:
         print(row)
